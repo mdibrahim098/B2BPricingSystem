@@ -12,7 +12,7 @@ This project is structured using **Clean Architecture**, ensuring a clear separa
 ```
 src/
 ├── B2B.Pricing.Domain         → Entities, Value Objects, Domain Events, Exceptions
-├── B2B.Pricing.Application    → Business logic, CQRS (Commands & Queries), Validation
+├── B2B.Pricing.Application    → Business logic, Repository Pattern, Validation
 ├── B2B.Pricing.Infrastructure → Database, EF Core Configurations, Repositories, Services
 ├── B2B.Pricing.WebAPI         → API Controllers, Dependency Injection, Swagger
 ```
@@ -20,7 +20,7 @@ src/
 **Core Principles**
 - Domain layer is independent of frameworks  
 - Infrastructure and UI depend on the Application layer  
-- Uses **CQRS**, **MediatR**, and **Repository Pattern**  
+- Uses **Repository Pattern**  
 - Promotes **DDD** (Domain-Driven Design)  
 
 ---
@@ -30,7 +30,7 @@ src/
 |-----------|-------------|
 | Framework | .NET 8 / .NET 7 |
 | ORM | Entity Framework Core |
-| Architecture | Clean Architecture, DDD, CQRS |
+| Architecture | Clean Architecture, DDD, Repository Pattern |
 | Messaging | MediatR |
 | Database | SQL Server |
 | API | ASP.NET Core Web API |
